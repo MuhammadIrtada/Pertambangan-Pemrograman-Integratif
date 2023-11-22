@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('pertambangans', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_proyek');
-            $table->date('tanggal_mulai');
-            $table->date('tanggal_selesai');
-            $table->string('fasilitas');
+            $table->string('nama');
+            $table->string('jenis_minyak');
             $table->string('lokasi');
+            $table->string('volume');
             $table->timestamps();
         });
     }

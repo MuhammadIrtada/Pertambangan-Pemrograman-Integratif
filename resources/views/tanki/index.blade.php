@@ -1,197 +1,486 @@
 @extends('layouts.app', ['class' => 'g-sidenav-show bg-gray-100'])
 
 @section('content')
-    @include('layouts.navbars.auth.topnav', ['title' => 'Profile'])
-    <div class="card shadow-lg mx-4 card-profile-bottom">
-        <div class="card-body p-3">
-            <div class="row gx-4">
-                <div class="col-auto">
-                    <div class="avatar avatar-xl position-relative">
-                        <img src="/img/team-1.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
-                    </div>
-                </div>
-                <div class="col-auto my-auto">
-                    <div class="h-100">
-                        <h5 class="mb-1">
-                            Sayo Kravits
-                        </h5>
-                        <p class="mb-0 font-weight-bold text-sm">
-                            Public Relations
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
-                    <div class="nav-wrapper position-relative end-0">
-                        <ul class="nav nav-pills nav-fill p-1" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link mb-0 px-0 py-1 active d-flex align-items-center justify-content-center "
-                                    data-bs-toggle="tab" href="javascript:;" role="tab" aria-selected="true">
-                                    <i class="ni ni-app"></i>
-                                    <span class="ms-2">App</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mb-0 px-0 py-1 d-flex align-items-center justify-content-center "
-                                    data-bs-toggle="tab" href="javascript:;" role="tab" aria-selected="false">
-                                    <i class="ni ni-email-83"></i>
-                                    <span class="ms-2">Messages</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mb-0 px-0 py-1 d-flex align-items-center justify-content-center "
-                                    data-bs-toggle="tab" href="javascript:;" role="tab" aria-selected="false">
-                                    <i class="ni ni-settings-gear-65"></i>
-                                    <span class="ms-2">Settings</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('layouts.navbars.auth.topnav', ['title' => 'Tables'])
     <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header pb-0">
-                        <div class="d-flex align-items-center">
-                            <p class="mb-0">Edit Profile</p>
-                            <button class="btn btn-primary btn-sm ms-auto">Settings</button>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p class="text-uppercase text-sm">User Information</p>
+            <div class="col-12">
+                <div class="card mb-4">
+                    <div class="card-header pb-0 mb-3">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Username</label>
-                                    <input class="form-control" type="text" value="lucky.jesse">
-                                </div>
+                            <div class="col-6 d-flex align-items-center">
+                                <h6 class="mb-0">Kesehatan Pegawai Departemen Tambang</h6>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Email address</label>
-                                    <input class="form-control" type="email" value="jesse@example.com">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">First name</label>
-                                    <input class="form-control" type="text" value="Jesse">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Last name</label>
-                                    <input class="form-control" type="text" value="Lucky">
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="horizontal dark">
-                        <p class="text-uppercase text-sm">Contact Information</p>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Address</label>
-                                    <input class="form-control" type="text"
-                                        value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">City</label>
-                                    <input class="form-control" type="text" value="New York">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Country</label>
-                                    <input class="form-control" type="text" value="United States">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Postal code</label>
-                                    <input class="form-control" type="text" value="437300">
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="horizontal dark">
-                        <p class="text-uppercase text-sm">About me</p>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">About me</label>
-                                    <input class="form-control" type="text"
-                                        value="A beautiful Dashboard for Bootstrap 5. It is Free and Open Source.">
-                                </div>
+                            <div class="col-6 text-end align-items-center">
+                                <a class="btn bg-warning mb-0 text-white" href={{ route('tangki.create') }}><i
+                                        class="fas fa-plus"></i>&nbsp;&nbsp;Pemeriksaan Baru</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-profile">
-                    <img src="/img/bg-profile.jpg" alt="Image placeholder" class="card-img-top">
-                    <div class="row justify-content-center">
-                        <div class="col-4 col-lg-4 order-lg-2">
-                            <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
-                                <a href="javascript:;">
-                                    <img src="/img/team-2.jpg"
-                                        class="rounded-circle img-fluid border border-2 border-white">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-header text-center border-0 pt-0 pt-lg-2 pb-4 pb-lg-3">
-                        <div class="d-flex justify-content-between">
-                            <a href="javascript:;" class="btn btn-sm btn-info mb-0 d-none d-lg-block">Connect</a>
-                            <a href="javascript:;" class="btn btn-sm btn-info mb-0 d-block d-lg-none"><i
-                                    class="ni ni-collection"></i></a>
-                            <a href="javascript:;"
-                                class="btn btn-sm btn-dark float-right mb-0 d-none d-lg-block">Message</a>
-                            <a href="javascript:;" class="btn btn-sm btn-dark float-right mb-0 d-block d-lg-none"><i
-                                    class="ni ni-email-83"></i></a>
-                        </div>
-                    </div>
-                    <div class="card-body pt-0">
-                        <div class="row">
-                            <div class="col">
-                                <div class="d-flex justify-content-center">
-                                    <div class="d-grid text-center">
-                                        <span class="text-lg font-weight-bolder">22</span>
-                                        <span class="text-sm opacity-8">Friends</span>
-                                    </div>
-                                    <div class="d-grid text-center mx-4">
-                                        <span class="text-lg font-weight-bolder">10</span>
-                                        <span class="text-sm opacity-8">Photos</span>
-                                    </div>
-                                    <div class="d-grid text-center">
-                                        <span class="text-lg font-weight-bolder">89</span>
-                                        <span class="text-sm opacity-8">Comments</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-4">
-                            <h5>
-                                Mark Davis<span class="font-weight-light">, 35</span>
-                            </h5>
-                            <div class="h6 font-weight-300">
-                                <i class="ni location_pin mr-2"></i>Bucharest, Romania
-                            </div>
-                            <div class="h6 mt-4">
-                                <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
-                            </div>
-                            <div>
-                                <i class="ni education_hat mr-2"></i>University of Computer Science
-                            </div>
+                    <div class="card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Nama</th>
+                                        <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            Status</th>
+                                        <th
+                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Tanggal Pemeriksaan</th>
+                                        <th class="text-secondary opacity-7"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($kesehatans as $kesehatan)
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex px-2 py-1">
+                                                    {{-- <div>
+                                                        <img src="/img/team-2.jpg" class="avatar avatar-sm me-3"
+                                                            alt="user1">
+                                                    </div> --}}
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm">{{ $kesehatan->user->nama_lengkap }}</h6>
+                                                        <p class="text-xs text-secondary mb-0">{{ $kesehatan->user->email }}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <span class="badge badge-sm bg-gradient-{{ $kesehatan->status == 'sehat'? 'success':'danger'  }}">{{ $kesehatan->status }}</span>
+                                                {{-- <span class="badge badge-sm bg-gradient-danger">sakit</span> --}}
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">{{ $kesehatan->created_at }}</span>
+                                            </td>
+                                            <td class="align-middle text-end">
+                                                <a href="{{ route('kesehatan.edit', $kesehatan->id) }}">
+                                                    <button class="btn btn-icon btn-1 btn-info" type="button">
+                                                        <span class="btn-inner--icon"><i class="ni ni-ruler-penc"></i></span>
+                                                    </button>
+                                                </a>
+                                                <form action="{{ route('kesehatan.destroy', $kesehatan->id) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button class="btn btn-icon btn-1 btn-danger" type="submit">
+                                                        <span class="btn-inner--icon"><i class="ni ni-fat-remove"></i></span>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    {{-- <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    <img src="/img/team-3.jpg" class="avatar avatar-sm me-3"
+                                                        alt="user2">
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">Alexa Liras</h6>
+                                                    <p class="text-xs text-secondary mb-0">alexa@creative-tim.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">Programator</p>
+                                            <p class="text-xs text-secondary mb-0">Developer</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-secondary">Offline</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">11/01/19</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
+                                                data-toggle="tooltip" data-original-title="Edit user">
+                                                Edit
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    <img src="/img/team-4.jpg" class="avatar avatar-sm me-3"
+                                                        alt="user3">
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">Laurent Perrier</h6>
+                                                    <p class="text-xs text-secondary mb-0">laurent@creative-tim.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">Executive</p>
+                                            <p class="text-xs text-secondary mb-0">Projects</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-success">Online</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">19/09/17</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
+                                                data-toggle="tooltip" data-original-title="Edit user">
+                                                Edit
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    <img src="/img/team-3.jpg" class="avatar avatar-sm me-3"
+                                                        alt="user4">
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">Michael Levi</h6>
+                                                    <p class="text-xs text-secondary mb-0">michael@creative-tim.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">Programator</p>
+                                            <p class="text-xs text-secondary mb-0">Developer</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-success">Online</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">24/12/08</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
+                                                data-toggle="tooltip" data-original-title="Edit user">
+                                                Edit
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    <img src="/img/team-2.jpg" class="avatar avatar-sm me-3"
+                                                        alt="user5">
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">Richard Gran</h6>
+                                                    <p class="text-xs text-secondary mb-0">richard@creative-tim.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">Manager</p>
+                                            <p class="text-xs text-secondary mb-0">Executive</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-secondary">Offline</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">04/10/21</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
+                                                data-toggle="tooltip" data-original-title="Edit user">
+                                                Edit
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    <img src="/img/team-4.jpg" class="avatar avatar-sm me-3"
+                                                        alt="user6">
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">Miriam Eric</h6>
+                                                    <p class="text-xs text-secondary mb-0">miriam@creative-tim.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">Programtor</p>
+                                            <p class="text-xs text-secondary mb-0">Developer</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-secondary">Offline</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">14/09/20</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs"
+                                                data-toggle="tooltip" data-original-title="Edit user">
+                                                Edit
+                                            </a>
+                                        </td>
+                                    </tr> --}}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        {{-- <div class="row">
+            <div class="col-12">
+                <div class="card mb-4">
+                    <div class="card-header pb-0">
+                        <h6>Projects table</h6>
+                    </div>
+                    <div class="card-body px-0 pt-0 pb-2">
+                        <div class="table-responsive p-0">
+                            <table class="table align-items-center justify-content-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Project</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            Budget</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            Status</th>
+                                        <th
+                                            class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">
+                                            Completion</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2">
+                                                <div>
+                                                    <img src="/img/small-logos/logo-spotify.svg"
+                                                        class="avatar avatar-sm rounded-circle me-2" alt="spotify">
+                                                </div>
+                                                <div class="my-auto">
+                                                    <h6 class="mb-0 text-sm">Spotify</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-sm font-weight-bold mb-0">$2,500</p>
+                                        </td>
+                                        <td>
+                                            <span class="text-xs font-weight-bold">working</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <span class="me-2 text-xs font-weight-bold">60%</span>
+                                                <div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-gradient-info" role="progressbar"
+                                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                            style="width: 60%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <button class="btn btn-link text-secondary mb-0">
+                                                <i class="fa fa-ellipsis-v text-xs"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2">
+                                                <div>
+                                                    <img src="/img/small-logos/logo-invision.svg"
+                                                        class="avatar avatar-sm rounded-circle me-2" alt="invision">
+                                                </div>
+                                                <div class="my-auto">
+                                                    <h6 class="mb-0 text-sm">Invision</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-sm font-weight-bold mb-0">$5,000</p>
+                                        </td>
+                                        <td>
+                                            <span class="text-xs font-weight-bold">done</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <span class="me-2 text-xs font-weight-bold">100%</span>
+                                                <div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-gradient-success" role="progressbar"
+                                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                                                            style="width: 100%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v text-xs"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2">
+                                                <div>
+                                                    <img src="/img/small-logos/logo-jira.svg"
+                                                        class="avatar avatar-sm rounded-circle me-2" alt="jira">
+                                                </div>
+                                                <div class="my-auto">
+                                                    <h6 class="mb-0 text-sm">Jira</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-sm font-weight-bold mb-0">$3,400</p>
+                                        </td>
+                                        <td>
+                                            <span class="text-xs font-weight-bold">canceled</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <span class="me-2 text-xs font-weight-bold">30%</span>
+                                                <div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-gradient-danger" role="progressbar"
+                                                            aria-valuenow="30" aria-valuemin="0" aria-valuemax="30"
+                                                            style="width: 30%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v text-xs"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2">
+                                                <div>
+                                                    <img src="/img/small-logos/logo-slack.svg"
+                                                        class="avatar avatar-sm rounded-circle me-2" alt="slack">
+                                                </div>
+                                                <div class="my-auto">
+                                                    <h6 class="mb-0 text-sm">Slack</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-sm font-weight-bold mb-0">$1,000</p>
+                                        </td>
+                                        <td>
+                                            <span class="text-xs font-weight-bold">canceled</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <span class="me-2 text-xs font-weight-bold">0%</span>
+                                                <div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-gradient-success" role="progressbar"
+                                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"
+                                                            style="width: 0%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v text-xs"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2">
+                                                <div>
+                                                    <img src="/img/small-logos/logo-webdev.svg"
+                                                        class="avatar avatar-sm rounded-circle me-2" alt="webdev">
+                                                </div>
+                                                <div class="my-auto">
+                                                    <h6 class="mb-0 text-sm">Webdev</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-sm font-weight-bold mb-0">$14,000</p>
+                                        </td>
+                                        <td>
+                                            <span class="text-xs font-weight-bold">working</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <span class="me-2 text-xs font-weight-bold">80%</span>
+                                                <div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-gradient-info" role="progressbar"
+                                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="80"
+                                                            style="width: 80%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v text-xs"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2">
+                                                <div>
+                                                    <img src="/img/small-logos/logo-xd.svg"
+                                                        class="avatar avatar-sm rounded-circle me-2" alt="xd">
+                                                </div>
+                                                <div class="my-auto">
+                                                    <h6 class="mb-0 text-sm">Adobe XD</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-sm font-weight-bold mb-0">$2,300</p>
+                                        </td>
+                                        <td>
+                                            <span class="text-xs font-weight-bold">done</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <span class="me-2 text-xs font-weight-bold">100%</span>
+                                                <div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-gradient-success" role="progressbar"
+                                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                                                            style="width: 100%;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <button class="btn btn-link text-secondary mb-0" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v text-xs"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
         @include('layouts.footers.auth.footer')
     </div>
 @endsection

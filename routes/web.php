@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PertambanganController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
@@ -26,7 +27,7 @@ use App\Http\Controllers\KesehatanController;
 // });
 
 Route::resource('/kesehatan', KesehatanController::class);
-
+Route::resource('/pertambangan', PertambanganController::class);
 
 Route::get('/', function () {
 	return redirect('/dashboard');

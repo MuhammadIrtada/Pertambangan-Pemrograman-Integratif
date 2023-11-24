@@ -18,47 +18,32 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label id="user_id" for="example-text-input" class="form-control-label">Nama Minyak</label>
-                                        {{-- <select id="user_id" name="user_id" class="form-select" aria-label="Default select example">
-                                            <option value="{{ $pertambangan->user_id }}" selected disabled>{{ $pertambangan->user->nama_lengkap }}</option>
-                                        </select> --}}
-                                        <input id="user_id" class="form-control" type="text" value="{{ $pertambangan->user->nama_lengkap }}" disabled>
-                                        <input name="user_id" class="form-control" type="hidden" value="{{ $pertambangan->user_id }}">
+                                        <label for="nama" class="form-control-label">Nama</label>
+                                        <input id="nama" name="nama" class="form-control" type="text" value="{{ $pertambangan->nama }}">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label id="status" for="example-text-input" class="form-control-label">Jenis Minyak</label>
-                                        <select id="status" name="status" class="form-select" aria-label="Default select example">
-                                            <option value="{{ $pertambangan->status == 'sehat'? 'sehat':'sakit' }}" selected>{{ $pertambangan->status == 'sehat'? 'Sehat':'Sakit' }}</option>
-                                            <option value="{{ $pertambangan->status == 'sehat'? 'sakit':'sehat' }}">{{ $pertambangan->status == 'sehat'? 'Sakit':'Sehat' }}</option>
-                                        </select>
+                                        <label for="jenis_minyak" class="form-control-label">Jenis Minyak</label>
+                                        <input id="jenis_minyak" name="jenis_minyak" class="form-control" type="text" value="{{ $pertambangan->jenis_minyak }}">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="keterangan" class="form-control-label">Lokasi</label>
-                                        <input id="keterangan" name="keterangan" class="form-control" type="text" value="{{ $pertambangan->keterangan }}">
+                                        <label for="lokasi" class="form-control-label">Lokasi</label>
+                                        <input id="lokasi" name="lokasi" class="form-control" type="text" value="{{ $pertambangan->lokasi }}">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="keterangan" class="form-control-label">Volume</label>
-                                        <input id="keterangan" name="keterangan" class="form-control" type="text" value="{{ $pertambangan->keterangan }}">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="keterangan" class="form-control-label">Keterangan</label>
-                                        <input id="keterangan" name="keterangan" class="form-control" type="text" value="{{ $pertambangan->keterangan }}">
+                                        <label for="volume" class="form-control-label">Volume</label>
+                                        <input id="volume" name="volume" class="form-control" type="text" value="{{ $pertambangan->volume }}">
                                     </div>
                                 </div>
                             </div>

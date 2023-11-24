@@ -17,44 +17,32 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label id="karyawan_id" for="example-text-input" class="form-control-label">Nama Minyak</label>
-                                        <select id="user_id" name="user_id" class="form-select" aria-label="Default select example">
-                                            <option selected>Pilih Minyak</option>
-                                            @foreach ($users as $user)
-                                            <option value="{{ $user->id }}">{{ $user->nama_lengkap }}</option>
-                                            @endforeach
-                                        </select>
+                                        <label for="nama" class="form-control-label">Nama</label>
+                                        <input id="nama" name="nama" class="form-control" type="text">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label id="status" for="example-text-input" class="form-control-label">Jenis Minyak</label>
-                                        <select id="status" name="status" class="form-select" aria-label="Default select example">
-                                            <option selected>Pilih Jenis Minyak</option>
-                                            <option value="sehat">Pertalite</option>
-                                            <option value="sakit">Pertamax</option>
-                                            <option value="sakit">Pertamax Turbo</option>
-                                            <option value="sakit">Bio Solar</option>
-                                            <option value="sakit">Pertamina DEX</option>
-                                        </select>
+                                        <label for="jenis_minyak" class="form-control-label">Jenis Minyak</label>
+                                        <input id="jenis_minyak" name="jenis_minyak" class="form-control" type="text">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="keterangan" class="form-control-label">Lokasi</label>
-                                        <input id="keterangan" name="keterangan" class="form-control" type="text">
+                                        <label for="lokasi" class="form-control-label">Lokasi</label>
+                                        <input id="lokasi" name="lokasi" class="form-control" type="text">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="keterangan" class="form-control-label">Volume</label>
-                                        <input id="keterangan" name="keterangan" class="form-control" type="text">
+                                        <label for="volume" class="form-control-label">Volume</label>
+                                        <input id="volume" name="volume" class="form-control" type="text">
                                     </div>
                                 </div>
                             </div>

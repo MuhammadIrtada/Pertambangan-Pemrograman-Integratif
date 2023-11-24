@@ -42,17 +42,19 @@
                                                             alt="user1">
                                                     </div> --}}
                                                     <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">{{ $pertambangan->user->nama }}</h6>
-                                                        <p class="text-xs text-secondary mb-0">{{ $pertambangan->user->email }}</p>
+                                                        <h6 class="mb-0 text-sm">{{ $pertambangan->nama }}</h6>
+                                                        {{-- <p class="text-xs text-secondary mb-0">{{ $pertambangan->user->email }}</p> --}}
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="badge badge-sm bg-gradient-{{ $pertambangan->jenis_minyak}}">{{ $pertambangan->jenis_minyak }}</span>
-                                                {{-- <span class="badge badge-sm bg-gradient-danger">Jenis Minyak</span> --}}
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">{{ $pertambangan->jenis_minyak }}</span>
                                             </td>
                                             <td class="align-middle text-center">
-                                                <span class="text-secondary text-xs font-weight-bold">{{ $pertambangan->created_at }}</span>
+                                                <span class="text-secondary text-xs font-weight-bold">{{ $pertambangan->lokasi }}</span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs font-weight-bold">{{ $pertambangan->volume }}</span>
                                             </td>
                                             <td class="align-middle text-end">
                                                 <a href="{{ route('pertambangan.edit', $pertambangan->id) }}">

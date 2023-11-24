@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('jenis_minyak');
             $table->string('lokasi');
-            $table->string('volume');
+            $table->double('volume');
             $table->timestamps();
         });
     }

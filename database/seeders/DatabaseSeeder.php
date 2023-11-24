@@ -29,5 +29,17 @@ class DatabaseSeeder extends Seeder
             'asal_divisi' => 'mining',
             'password' => bcrypt('secret')
         ]);
+        DB::table('pertambangans')->insert([
+            'nama' => 'Tempat Penyimpanan A',
+            'jenis_minyak' => 'Pertamax',
+            'lokasi' => 'Jl. Lokasi A',
+            'volume' => '10000',
+        ]);
+        DB::table('pertambangans')->insert([
+            'nama' => 'Tempat Penyimpanan B',
+            'jenis_minyak' => 'Pertalite',
+            'lokasi' => 'Jl. Lokasi B',
+            'volume' => '20000',
+        ]);
     }
 }

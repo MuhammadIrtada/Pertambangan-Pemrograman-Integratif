@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link {{ Route::currentRouteName() == 'pertambangan.index' ? 'active' : '' }}" href="{{ route('pertambangan.index') }}">
+                <a class="nav-link {{ explode('.', Route::currentRouteName())[0] == 'pertambangan' ? 'active' : '' }}" href="{{ route('pertambangan.index') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center text-warning">
                         {{-- <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i> --}}
@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Route::currentRouteName() == 'kesehatan.index' ? 'active' : '' }}" href="{{ route('kesehatan.index') }}">
+                <a class="nav-link {{ explode('.', Route::currentRouteName())[0] == 'kesehatan' ? 'active' : '' }}" href="{{ route('kesehatan.index') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center text-warning">
                         {{-- <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i> --}}

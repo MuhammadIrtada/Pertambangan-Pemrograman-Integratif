@@ -5,10 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Kesehatan;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class KesehatanController extends Controller
 {
     public function index() {
+        $response = Http::get('http://microservice-user.test/api/users');
+
         return view('kesehatan.index', [
             'kesehatans'=>Kesehatan::all()->sortByDesc('created_at'),
         ]);

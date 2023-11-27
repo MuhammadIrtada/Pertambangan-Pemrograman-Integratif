@@ -29,6 +29,16 @@ class DatabaseSeeder extends Seeder
             'asal_divisi' => 'mining',
             'password' => bcrypt('secret')
         ]);
+        DB::table('kesehatans')->insert([
+            'user_id' => '1',
+            'status' => 'sehat',
+            'keterangan' => 'Hasil pemeriksaan dinyatakan sehat',
+        ]);
+        DB::table('kesehatans')->insert([
+            'user_id' => '2',
+            'status' => 'sakit',
+            'keterangan' => 'mental breakdance',
+        ]);
         DB::table('pertambangans')->insert([
             'nama' => 'Tempat Penyimpanan A',
             'jenis_minyak' => 'Pertamax',

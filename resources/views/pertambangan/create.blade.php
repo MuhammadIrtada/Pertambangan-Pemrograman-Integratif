@@ -18,7 +18,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="nama" class="form-control-label">Nama</label>
-                                        <input id="nama" name="nama" class="form-control" type="text">
+                                        <input id="nama" name="nama" class="form-control" type="text" required>
                                     </div>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jenis_minyak" class="form-control-label">Jenis Minyak</label>
-                                        <input id="jenis_minyak" name="jenis_minyak" class="form-control" type="text">
+                                        <input id="jenis_minyak" name="jenis_minyak" class="form-control" type="text" required>
                                     </div>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="lokasi" class="form-control-label">Lokasi</label>
-                                        <input id="lokasi" name="lokasi" class="form-control" type="text">
+                                        <input id="lokasi" name="lokasi" class="form-control" type="text" required>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="volume" class="form-control-label">Volume</label>
-                                        <input id="volume" name="volume" class="form-control" type="text">
+                                        <input id="volume" name="volume" class="form-control" type="text" required>
                                     </div>
                                 </div>
                             </div>

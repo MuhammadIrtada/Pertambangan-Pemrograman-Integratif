@@ -20,7 +20,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+                <!-- <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
                     <div class="nav-wrapper position-relative end-0">
                         <ul class="nav nav-pills nav-fill p-1" role="tablist">
                             <li class="nav-item">
@@ -46,13 +46,13 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
     <div class="container-fluid py-4">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header pb-0">
                         <div class="d-flex align-items-center">
@@ -131,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <div class="card card-profile">
                     <img src="/img/bg-profile.jpg" alt="Image placeholder" class="card-img-top">
                     <div class="row justify-content-center">
@@ -191,7 +191,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         @include('layouts.footers.auth.footer')
     </div>
 @endsection

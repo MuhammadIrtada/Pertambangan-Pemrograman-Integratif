@@ -1,72 +1,83 @@
 @extends('layouts.app', ['class' => 'g-sidenav-show bg-gray-100'])
 
 @section('content')
-    @include('layouts.navbars.auth.topnav', ['title' => 'Tables'])
-    <div class="container-fluid py-4">
-        <div class="row">
-            <div class="col-12">
-                <div class="card mb-4">
-                    <div class="card-header pb-0 mb-3">
-                        <div class="row">
-                            <div class="col-6 d-flex align-items-center">
-                                <h6 class="mb-0">Kesehatan Pegawai Departemen Tambang</h6>
-                            </div>
-                            <div class="col-6 text-end align-items-center">
-                                <a class="btn bg-warning mb-0 text-white" href={{ route('kesehatan.create') }}><i
-                                        class="fas fa-plus"></i>&nbsp;&nbsp;Pemeriksaan Baru</a>
-                            </div>
+@include('layouts.navbars.auth.topnav', ['title' => 'Tables'])
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0 mb-3">
+                    <div class="row">
+                        <div class="col-6 d-flex align-items-center">
+                            <h6 class="mb-0">Kesehatan Pegawai Departemen Tambang</h6>
+                        </div>
+                        <div class="col-6 text-end align-items-center">
+                            <a class="btn bg-warning mb-0 text-white" href={{ route('kesehatan.create') }}><i class="fas fa-plus"></i>&nbsp;&nbsp;Pemeriksaan Baru</a>
                         </div>
                     </div>
-                    <div class="card-body px-0 pt-0 pb-2">
-                        <div class="table-responsive p-0">
-                            <table class="table align-items-center mb-0">
-                                <thead>
-                                    <tr>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Nama</th>
-                                        <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                            Status</th>
-                                        {{-- <th
-                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Tanggal Pemeriksaan</th> --}}
-                                        <th class="text-secondary opacity-7"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($kesehatans as $kesehatan)
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex px-2 py-1">
-                                                    <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">{{ $kesehatan['nama_lengkap'] }}</h6>
-                                                        {{-- <p class="text-xs text-secondary mb-0">{{ $kesehatan->user->email }}</p> --}}
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="align-middle text-center text-sm">
-                                                <span class="badge badge-sm bg-gradient-{{ $kesehatan['status_kesehatan'] == 'Sehat'? 'success':'danger'  }}">{{ $kesehatan['status_kesehatan'] }}</span>
-                                            </td>
-                                            {{-- <td class="align-middle text-center">
-                                                <span class="text-secondary text-xs font-weight-bold">{{ $kesehatan->created_at }}</span>
-                                                <span class="text-secondary text-xs font-weight-bold">{{ $kesehatan['id_kesehatan'] }}</span>
-                                            </td> --}}
-                                            <td class="align-middle text-end">
-                                                <a href="{{ route('kesehatan.edit', $kesehatan['id_kesehatan']) }}">
-                                                    <button class="btn btn-icon btn-1 btn-info" type="button">
-                                                        <span class="btn-inner--icon"><i class="ni ni-ruler-pencil"></i></span>
-                                                    </button>
-                                                </a>
-                                                <form action="{{ route('kesehatan.destroy', $kesehatan['id_kesehatan']) }}" method="post">
-                                                    @csrf
-                                                    @method('delete')
-                                                    <button class="btn btn-icon btn-1 btn-danger" type="submit">
-                                                        <span class="btn-inner--icon"><i class="ni ni-fat-remove"></i></span>
-                                                    </button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                    {{-- <tr>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Nama</th>
+                                    <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        Status</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Keterangan</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Tanggal Pemeriksaan</th>
+                                    <th class="text-secondary opacity-7"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($kesehatans as $kesehatan)
+                                <tr>
+                                    <td>
+                                        <div class="d-flex px-2 py-1">
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="mb-0 text-sm">{{ $kesehatan['nama_lengkap'] }}</h6>
+                                                {{-- <p class="text-xs text-secondary mb-0">{{ $kesehatan->user->email }}</p> --}}
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle text-center text-sm">
+                                        <span class="badge badge-sm bg-gradient-{{ $kesehatan['status_kesehatan'] == 'Sehat'? 'success':'danger'  }}">{{ $kesehatan['status_kesehatan'] }}</span>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex px-2 py-1">
+                                            <div class="d-flex flex-column justify-content-center">
+                                                <h6 class="mb-0 text-sm">{{ $kesehatan['keterangan'] }}</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        @php
+                                        $formattedDate = \Carbon\Carbon::parse($kesehatan['created_at'])->format('d/m/Y');
+                                        @endphp
+
+                                        {{-- Tampilkan hasil yang diformat --}}
+                                        <span class="text-secondary text-xs font-weight-bold">{{ $formattedDate }}</span>
+                                    </td>
+                                    <td class="align-middle text-end">
+                                        <a href="{{ route('kesehatan.edit', $kesehatan['id_kesehatan']) }}">
+                                            <button class="btn btn-icon btn-1 btn-info" type="button">
+                                                <span class="btn-inner--icon"><i class="ni ni-ruler-pencil"></i></span>
+                                            </button>
+                                        </a>
+                                        <form action="{{ route('kesehatan.destroy', $kesehatan['id_kesehatan']) }}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button class="btn btn-icon btn-1 btn-danger" type="submit">
+                                                <span class="btn-inner--icon"><i class="ni ni-fat-remove"></i></span>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                @endforeach
+                                {{-- <tr>
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
@@ -216,14 +227,14 @@
                                             </a>
                                         </td>
                                     </tr> --}}
-                                </tbody>
-                            </table>
-                        </div>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-        {{-- <div class="row">
+    </div>
+    {{-- <div class="row">
             <div class="col-12">
                 <div class="card mb-4">
                     <div class="card-header pb-0">
@@ -477,6 +488,6 @@
                 </div>
             </div>
         </div> --}}
-        @include('layouts.footers.auth.footer')
-    </div>
+    @include('layouts.footers.auth.footer')
+</div>
 @endsection

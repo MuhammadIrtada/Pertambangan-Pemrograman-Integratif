@@ -21,7 +21,7 @@
                                         <select id="user_id" name="user_id" class="form-select" aria-label="Default select example">
                                             <option selected>Pilih Karyawan</option>
                                             @foreach ($users as $user)
-                                            <option value="{{ $user->id }}">{{ $user->nama_lengkap }}</option>
+                                            <option value="{{ $user['nip'] }}">{{ $user['nama_lengkap'] }}</option>
                                             @endforeach
                                         </select>
                                     </div>

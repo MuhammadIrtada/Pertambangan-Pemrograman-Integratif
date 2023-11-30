@@ -3,7 +3,7 @@
 @section('content')
     @include('layouts.navbars.auth.topnav', ['title' => 'Kesehatan'])
     <div class="container-fluid py-4">
-        <form action="{{ route('kesehatan.update', $kesehatan->id) }}" method="post">
+        <form action="{{ route('kesehatan.update', $kesehatan['id_kesehatan']) }}" method="post">
             @csrf
             @method('patch')
             <div class="row">
@@ -19,11 +19,8 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label id="user_id" for="example-text-input" class="form-control-label">Nama Karyawan</label>
-                                        {{-- <select id="user_id" name="user_id" class="form-select" aria-label="Default select example">
-                                            <option value="{{ $kesehatan->user_id }}" selected disabled>{{ $kesehatan->user->nama_lengkap }}</option>
-                                        </select> --}}
-                                        <input id="user_id" class="form-control" type="text" value="{{ $kesehatan->user->nama_lengkap }}" disabled>
-                                        <input name="user_id" class="form-control" type="hidden" value="{{ $kesehatan->user_id }}">
+                                        <input id="user_id" class="form-control" type="text" value="{{ $kesehatan['nama_lengkap'] }}" disabled>
+                                        <input name="user_id" class="form-control" type="hidden" value="{{ $kesehatan['id_kesehatan'] }}">
                                     </div>
                                 </div>
                             </div>
@@ -32,8 +29,8 @@
                                     <div class="form-group">
                                         <label id="status" for="example-text-input" class="form-control-label">Status Kesehatan</label>
                                         <select id="status" name="status" class="form-select" aria-label="Default select example">
-                                            <option value="{{ $kesehatan->status == 'sehat'? 'sehat':'sakit' }}" selected>{{ $kesehatan->status == 'sehat'? 'Sehat':'Sakit' }}</option>
-                                            <option value="{{ $kesehatan->status == 'sehat'? 'sakit':'sehat' }}">{{ $kesehatan->status == 'sehat'? 'Sakit':'Sehat' }}</option>
+                                            <option value="{{ $kesehatan['status_kesehatan'] == 'Sehat'? 'Sehat':'Sakit' }}" selected>{{ $kesehatan['status_kesehatan'] == 'Sehat'? 'Sehat':'Sakit' }}</option>
+                                            <option value="{{ $kesehatan['status_kesehatan'] == 'Sehat'? 'Sakit':'Sehat' }}">{{ $kesehatan['status_kesehatan'] == 'Sehat'? 'Sakit':'Sehat' }}</option>
                                         </select>
                                     </div>
                                 </div>
@@ -42,7 +39,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="keterangan" class="form-control-label">Keterangan</label>
-                                        <input id="keterangan" name="keterangan" class="form-control" type="text" value="{{ $kesehatan->keterangan }}">
+                                        <input id="keterangan" name="keterangan" class="form-control" type="text" value="{{ $kesehatan['keterangan'] }}">
                                     </div>
                                 </div>
                             </div>

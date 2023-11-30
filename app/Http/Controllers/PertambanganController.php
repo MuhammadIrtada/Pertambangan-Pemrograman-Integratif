@@ -40,10 +40,10 @@ class PertambanganController extends Controller
         return redirect('pertambangan');
     }
 
-    public function edit(Request $request) {
-        $pertambangan = Http::get("http://api.aibm.my.id/storagetank/$request->id")['data']['storagetank'][0];
+    public function edit(String $pertambangan) {
+        $response = Http::get("http://api.aibm.my.id/storagetank/$pertambangan")['data']['storagetank'];
         return view('pertambangan.edit', [
-            'pertambangan'=>$pertambangan,
+            'pertambangan'=>$response,
         ]);
     }
 

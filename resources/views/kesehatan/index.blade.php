@@ -26,9 +26,9 @@
                                             Nama</th>
                                         <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                             Status</th>
-                                        <th
+                                        {{-- <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Tanggal Pemeriksaan</th>
+                                            Tanggal Pemeriksaan</th> --}}
                                         <th class="text-secondary opacity-7"></th>
                                     </tr>
                                 </thead>
@@ -37,30 +37,26 @@
                                         <tr>
                                             <td>
                                                 <div class="d-flex px-2 py-1">
-                                                    {{-- <div>
-                                                        <img src="/img/team-2.jpg" class="avatar avatar-sm me-3"
-                                                            alt="user1">
-                                                    </div> --}}
                                                     <div class="d-flex flex-column justify-content-center">
-                                                        <h6 class="mb-0 text-sm">{{ $kesehatan->user->nama_lengkap }}</h6>
-                                                        <p class="text-xs text-secondary mb-0">{{ $kesehatan->user->email }}</p>
+                                                        <h6 class="mb-0 text-sm">{{ $kesehatan['nama_lengkap'] }}</h6>
+                                                        {{-- <p class="text-xs text-secondary mb-0">{{ $kesehatan->user->email }}</p> --}}
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="align-middle text-center text-sm">
-                                                <span class="badge badge-sm bg-gradient-{{ $kesehatan->status == 'sehat'? 'success':'danger'  }}">{{ $kesehatan->status }}</span>
-                                                {{-- <span class="badge badge-sm bg-gradient-danger">sakit</span> --}}
+                                                <span class="badge badge-sm bg-gradient-{{ $kesehatan['status_kesehatan'] == 'Sehat'? 'success':'danger'  }}">{{ $kesehatan['status_kesehatan'] }}</span>
                                             </td>
-                                            <td class="align-middle text-center">
+                                            {{-- <td class="align-middle text-center">
                                                 <span class="text-secondary text-xs font-weight-bold">{{ $kesehatan->created_at }}</span>
-                                            </td>
+                                                <span class="text-secondary text-xs font-weight-bold">{{ $kesehatan['id_kesehatan'] }}</span>
+                                            </td> --}}
                                             <td class="align-middle text-end">
-                                                <a href="{{ route('kesehatan.edit', $kesehatan->id) }}">
+                                                <a href="{{ route('kesehatan.edit', $kesehatan['id_kesehatan']) }}">
                                                     <button class="btn btn-icon btn-1 btn-info" type="button">
                                                         <span class="btn-inner--icon"><i class="ni ni-ruler-penc"></i></span>
                                                     </button>
                                                 </a>
-                                                <form action="{{ route('kesehatan.destroy', $kesehatan->id) }}" method="post">
+                                                <form action="{{ route('kesehatan.destroy', $kesehatan['id_kesehatan']) }}" method="post">
                                                     @csrf
                                                     @method('delete')
                                                     <button class="btn btn-icon btn-1 btn-danger" type="submit">

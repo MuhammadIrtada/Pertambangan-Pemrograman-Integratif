@@ -14,6 +14,7 @@ class Kesehatan extends Model
         'user_id',
         'status',
         'keterangan'
+        
     ];
 
     public function user(): BelongsTo

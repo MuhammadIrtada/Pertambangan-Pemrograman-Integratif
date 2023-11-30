@@ -53,7 +53,7 @@
                                             <td class="align-middle text-end">
                                                 <a href="{{ route('kesehatan.edit', $kesehatan['id_kesehatan']) }}">
                                                     <button class="btn btn-icon btn-1 btn-info" type="button">
-                                                        <span class="btn-inner--icon"><i class="ni ni-ruler-penc"></i></span>
+                                                        <span class="btn-inner--icon"><i class="ni ni-ruler-pencil"></i></span>
                                                     </button>
                                                 </a>
                                                 <form action="{{ route('kesehatan.destroy', $kesehatan['id_kesehatan']) }}" method="post">

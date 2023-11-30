@@ -55,7 +55,7 @@
                                             <td class="align-middle text-end">
                                                 <a href="{{ route('pertambangan.edit', $pertambangan['id_tangki_penyimpanan']) }}">
                                                     <button class="btn btn-icon btn-1 btn-info" type="button">
-                                                        <span class="btn-inner--icon"><i class="ni ni-ruler-penc"></i></span>
+                                                        <span class="btn-inner--icon"><i class="ni ni-ruler-pencil"></i></span>
                                                     </button>
                                                 </a>
                                                 <form action="{{ route('pertambangan.destroy', $pertambangan['id_tangki_penyimpanan']) }}" method="post">
